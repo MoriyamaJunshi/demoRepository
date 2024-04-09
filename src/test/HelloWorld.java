@@ -1,16 +1,13 @@
 package test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class HelloWorld {
-	public static void main(String[] args)throws IOException {
-        BufferedReader br = new BufferedReader(
-                new InputStreamReader( System.in ) );
-        
-        String  s = br.readLine(); 
-        System.out.println(s);
+	public static void main(String[] args) {
+		int x = 3;
+		int y = 2;
+		if(x > y) {
+			System.out.println("xはyより大きい");
+		}else {
+			System.out.println("xはyより小さい");
+		}
 	}
-
 }

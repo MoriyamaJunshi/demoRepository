@@ -2,8 +2,10 @@ package test;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		for(int i = 3; i < 30; i += 3 ) {
-			System.out.println(i);
+		int x = 1;
+		for(int n = 1; n <= 8; n ++ ) {
+			x *= 2;
+			System.out.println("2の" + n + "乗は" + x);
 		}
 	}
 }

@@ -2,21 +2,15 @@ package test;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		int x = -1;
-		if (x > 0) {
-			  if (x % 2 == 0) {
-			    System.out.println("xは正の偶数です");
-			  } else {
-			    System.out.println("xは正の奇数です");
-			  }
-		} else if (x < 0) {
-			  if (x % 2 == 0) {
-			    System.out.println("xは負の偶数です");
-			  } else {
-			    System.out.println("xは負の奇数です");
-			  }
+		int x = 56;
+		if (x >= 80) {
+			System.out.println("優");
+		}else if(x >= 70) {
+			System.out.println("良");
+		}else if(x >= 60) {
+			System.out.println("可");
 		}else {
-			System.out.println("xは正の偶数です");
+			System.out.println("不可");
 		}
 	}
 }

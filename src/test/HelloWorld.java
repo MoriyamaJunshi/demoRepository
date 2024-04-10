@@ -2,14 +2,11 @@ package test;
 
 public class HelloWorld {
 	public static void main(String[] args) {
-		int x = 3;
-		int y = 2;
-		if(x > y) {
-			System.out.println("xはyより大きい");
-		}else if(x < y) {
-			System.out.println("xはyより小さい");
+		int x = 5;
+		if(x % 2 == 0) {
+			System.out.println("xは偶数です");
 		}else {
-			System.out.println("xとyは等しい");
+			System.out.println("xは奇数です");
 		}
 	}
 }

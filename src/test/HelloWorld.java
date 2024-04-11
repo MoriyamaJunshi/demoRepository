@@ -2,13 +2,10 @@ package test;
 
 public class HelloWorld {
     public static void main(String[] args) {
-    	int x = 3;
-    	int y = 7;
-    	int z;
-    	z = x;
-    	x = y;
-    	y = z;
-    	System.out.println("x =" + x + ",y =" + y );
+    	int x = 19;
+    	int y = 23;
+    	int z = x * y;
+    	System.out.println(z );
 
     }
 }

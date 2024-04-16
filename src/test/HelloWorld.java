@@ -10,30 +10,22 @@ public class HelloWorld
     {
         BufferedReader br = new BufferedReader(
                                 new InputStreamReader( System.in ) );
-        System.out.println("0=日曜、1=月曜、2=火曜、3=水曜、4=木曜、5=金曜、6=土曜");
         int x = Integer.parseInt( br.readLine() );
-        System.out.println("0=午前、1=午後、2=夜間");
         int y = Integer.parseInt( br.readLine() );
-        if(x == 1 || x == 4) {
-        	System.out.println("診療可能です。");
-        }else if(x == 2 || x == 5) {
-        	if(y == 0 ) {
-        		System.out.println("休診時間です。");
-        	}else {
-        		System.out.println("診療可能です。");
-        	}
-        }else if(x == 3 ) {
-        	if(y == 2 ) {
-        		System.out.println("休診時間です。");
-        	}else {
-        		System.out.println("診療可能です。");
-        	}
-        }else {
-        	if(y == 0 ) {
-        		System.out.println("診療可能です。");
-        	}else {
-        		System.out.println("休診時間です。");
-        	}
+        if( x < y && ( x % 2 == 0 && y % 2 ==0 )) {
+            System.out.println( "xはyより小さく、かつ、xとyは共に偶数である。" );
+        }
+        if( x == y && ( x < 0 && y < 0) ) {
+            System.out.println( "xとyは等しく、かつ、負の数である。" );
+        }
+        if( x < y ||  x % 2 == 0 ) {
+            System.out.println( "xはyより小さい、または、xは偶数である。" );
+        }
+        if( (x<=10 || x >=100) && ( y>=10 && y<=100) ) {
+            System.out.println( "xは10以下または100以上で、かつ、yは10以上かつ100以下である。" );
+        }
+        if( x > 0 || y > 0 ) {
+            System.out.println( "xもyも負の数である、ではない。" );        
         }
     }
 }

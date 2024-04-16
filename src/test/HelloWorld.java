@@ -12,10 +12,6 @@ public class HelloWorld
                                 new InputStreamReader( System.in ) );
         int x = Integer.parseInt( br.readLine() );
         int y = Integer.parseInt( br.readLine() );
-        System.out.println( x + y );
-        System.out.println( x - y );
-        System.out.println( x * y );
-        System.out.println( x / y );
-        System.out.println( x % y );
+        System.out.println( ( x + y )/2 );
     }
 }

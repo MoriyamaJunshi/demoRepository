@@ -9,26 +9,17 @@ public class HelloWorld
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
-        int giants = 0;
-        int tigers = 0;
+        int max_value = 0;
 
-        for( int game = 1 ; game <= 9 ; game++ )
+        for( int i = 0 ; i < 10 ; i++ )
         {
-            System.out.print( game + "回表、巨人の得点は？" );
-            giants += Integer.parseInt( br.readLine() );
+            int value = Integer.parseInt( br.readLine() );
 
-            System.out.print( game + "回裏、阪神の得点は？" );
-            tigers += Integer.parseInt( br.readLine() );
+            if( value > max_value )
+                max_value = value;
         }
 
-        System.out.println( "巨人：" + giants + "点, 阪神：" + tigers + "点" );
-
-        if( giants > tigers )
-            System.out.println( "巨人の勝ち" );
-        else if( giants < tigers )
-            System.out.println( "阪神の勝ち" );
-        else
-            System.out.println( "引き分け" );
+        System.out.println( "最大値=" + max_value );
     }
 }
 

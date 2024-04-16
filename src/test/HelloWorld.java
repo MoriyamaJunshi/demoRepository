@@ -6,26 +6,36 @@ import java.io.InputStreamReader;
 
 public class HelloWorld
 {
-    public static void main( String[] args ) throws IOException
-    {
+    public static void main(String[] args) {
         BufferedReader br = new BufferedReader(
-                                new InputStreamReader( System.in ) );
-        int x = Integer.parseInt( br.readLine() );
-        int y = Integer.parseInt( br.readLine() );
-        if( x < y && ( x % 2 == 0 && y % 2 ==0 )) {
-            System.out.println( "xはyより小さく、かつ、xとyは共に偶数である。" );
+                new InputStreamReader(System.in));
+        int winCount = 0;
+        int loseCount = 0;
+        
+        try {
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i + 1 + "回目の対戦結果を入力 (0: 負け, 1: 勝ち): ");
+            int score = 	Integer.parseInt(br.readLine());
+
+            if (score == 0) {
+                loseCount++;
+            } else if (score == 1) {
+                winCount++;
+            } else {
+                System.out.println("不正な入力です。0 または 1 を入力してください。");
+                i--; // 入力ミスした場合はカウントしない
+            }
         }
-        if( x == y && ( x < 0 && y < 0) ) {
-            System.out.println( "xとyは等しく、かつ、負の数である。" );
-        }
-        if( x < y ||  x % 2 == 0 ) {
-            System.out.println( "xはyより小さい、または、xは偶数である。" );
-        }
-        if( (x<=10 || x >=100) && ( y>=10 && y<=100) ) {
-            System.out.println( "xは10以下または100以上で、かつ、yは10以上かつ100以下である。" );
-        }
-        if( x > 0 || y > 0 ) {
-            System.out.println( "xもyも負の数である、ではない。" );        
+
+        System.out.println("対戦結果:");
+        System.out.println("勝ち：" + winCount + "回");
+        System.out.println("負け：" + loseCount + "回");
+        
+        
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
+

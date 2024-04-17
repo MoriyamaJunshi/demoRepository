@@ -12,7 +12,7 @@ public class HelloWorld
         
             int x = Integer.parseInt( br.readLine() );
             for(int i = 0; i < x;  i++) {
-            	System.out.print( "*" );
+            	System.out.print( i % 10 );
             }
 
     }

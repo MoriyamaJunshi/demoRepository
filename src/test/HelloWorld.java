@@ -10,13 +10,22 @@ public class HelloWorld
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
  
-            int sum = 0;
+        int strike = 0;
+        int ball = 0;
 
-            while(sum <= 100) {
-            	int num = Integer.parseInt( br.readLine() );
-            	sum += num;
-            }
-            System.out.println("合計は" + sum );
+        while( strike < 3 && ball < 4 )
+        {
+            System.out.print( "ストライク=1 or ボール=2 ？" );
+
+            int judge = Integer.parseInt( br.readLine() );
+
+            if( judge == 1 )
+                strike++;
+            else if( judge == 2 )
+                ball++;
+        }
+
+        System.out.println( ball + "ボール," + strike + "ストライク" );
 
     }
 }

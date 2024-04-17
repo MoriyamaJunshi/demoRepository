@@ -15,7 +15,7 @@ public class HelloWorld
 
         while( strike < 3 && ball < 4 )
         {
-            System.out.print( "ストライク=1 or ボール=2 ？" );
+            System.out.print( "ストライク=1 or ボール=2 orファウル=3" );
 
             int judge = Integer.parseInt( br.readLine() );
 
@@ -23,6 +23,9 @@ public class HelloWorld
                 strike++;
             else if( judge == 2 )
                 ball++;
+            else if (judge ==3 && strike <2)
+            	strike++;
+            	
         }
 
         System.out.println( ball + "ボール," + strike + "ストライク" );

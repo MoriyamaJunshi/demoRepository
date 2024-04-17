@@ -9,23 +9,12 @@ public class HelloWorld
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
-        int max_value = 0;
-        int min_value = 0;
-
-        for( int i = 0 ; i < 10 ; i++ )
-        {
-            int value = Integer.parseInt( br.readLine() );
-            if(i==0) {
-            	max_value = value;
-            	min_value = value;
-            }else {
-                if( value > max_value )
-                    max_value = value;
-                if( value < min_value )
-                	min_value = value;         	
+        
+            int x = Integer.parseInt( br.readLine() );
+            for(int i = 0; i < x;  i++) {
+            	System.out.print( "*" );
             }
-        }
-        System.out.println( "最大値=" + max_value + "最小値=" + min_value );
+
     }
 }
 

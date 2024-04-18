@@ -1,23 +1,14 @@
 package test;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+public class HelloWorld{
+	public static void main( String[] args ) {
+	for( int p = 1 ; p <= 9 ; p++ )
+	{
+	    for( int q = 1 ; q <= 9 ; q++ )
+	        System.out.printf(" %2d", p * q );
 
-public class HelloWorld
-{
-    public static void main(String[] args) throws NumberFormatException, IOException {
-        BufferedReader br = new BufferedReader(
-                new InputStreamReader(System.in));
- 
-        int n = Integer.parseInt( br.readLine() );
-        
-        for( int x = 2 ; n > 1 ; x++ ){
-            while( ( n % x ) == 0 ){
-                System.out.print( x + " " );
-                n /= x;
-            }
-        }
-    }
+	    System.out.println();
+	}
+}
 }
 

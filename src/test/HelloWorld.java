@@ -1,14 +1,26 @@
 package test;
 
-public class HelloWorld{
-	public static void main( String[] args ) {
-	for( int p = 1 ; p <= 9 ; p++ )
-	{
-	    for( int q = 1 ; q <= 9 ; q++ )
-	        System.out.printf(" %2d", p * q );
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-	    System.out.println();
+public class HelloWorld{
+    public static void main( String[] args ) throws IOException{
+	        BufferedReader br = new BufferedReader(
+	                                new InputStreamReader( System.in ) );
+
+	        int sum = 0;
+	       
+	        for( ; ; ) {
+	        	 int x = Integer.parseInt( br.readLine() );
+	        	 
+	        	 if(x == 0) {
+	        		 break;
+	        	 }
+	        	 
+	        	sum += x;
+	        }
+	        	System.out.println(sum);
 	}
-}
 }
 

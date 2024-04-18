@@ -10,17 +10,16 @@ public class HelloWorld{
 	                                new InputStreamReader( System.in ) );
 
 	        int sum = 0;
-	       
+	       int count = 0;
 	        for( ; ; ) {
 	        	 int x = Integer.parseInt( br.readLine() );
-	        	 
 	        	 if(x == 0) {
 	        		 break;
 	        	 }
-	        	 
 	        	sum += x;
+	        	count ++;
 	        }
-	        	System.out.println(sum);
+	        	System.out.println(sum / count);
 	}
 }
 

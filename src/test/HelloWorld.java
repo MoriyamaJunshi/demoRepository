@@ -10,19 +10,14 @@ public class HelloWorld
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
  
-        int value = Integer.parseInt( br.readLine() );
-        int n;
-
-        for( n = 2 ; n <= ( value / 2 ) ; n++ ){
-            if( ( value % n ) == 0 )
-                break;
+        int n = Integer.parseInt( br.readLine() );
+        
+        for( int x = 2 ; n > 1 ; x++ ){
+            while( ( n % x ) == 0 ){
+                System.out.print( x + " " );
+                n /= x;
+            }
         }
-
-        if( n > ( value / 2 ) )
-            System.out.println( value + "は素数です" );
-        else
-            System.out.println( value + "は素数ではありません" );
-   
-        }
+    }
 }
 

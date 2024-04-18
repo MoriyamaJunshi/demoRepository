@@ -10,26 +10,19 @@ public class HelloWorld
         BufferedReader br = new BufferedReader(
                 new InputStreamReader(System.in));
  
-        int strike = 0;
-        int ball = 0;
+        int value = Integer.parseInt( br.readLine() );
+        int n;
 
-        while( strike < 3 && ball < 4 )
-        {
-            System.out.print( "ストライク=1 or ボール=2 orファウル=3" );
-
-            int judge = Integer.parseInt( br.readLine() );
-
-            if( judge == 1 )
-                strike++;
-            else if( judge == 2 )
-                ball++;
-            else if (judge ==3 && strike <2)
-            	strike++;
-            	
+        for( n = 2 ; n <= ( value / 2 ) ; n++ ){
+            if( ( value % n ) == 0 )
+                break;
         }
 
-        System.out.println( ball + "ボール," + strike + "ストライク" );
-
-    }
+        if( n > ( value / 2 ) )
+            System.out.println( value + "は素数です" );
+        else
+            System.out.println( value + "は素数ではありません" );
+   
+        }
 }
 

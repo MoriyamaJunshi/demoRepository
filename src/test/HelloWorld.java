@@ -8,18 +8,15 @@ public class HelloWorld{
     public static void main( String[] args ) throws IOException{
 	        BufferedReader br = new BufferedReader(
 	                                new InputStreamReader( System.in ) );
+	        
+	        int size = Integer.parseInt( br.readLine() );
+	        for( int i = 0 ; i < size ; i++ )
+	        {
+	            for( int j = 0 ; j <= i ; j++ )
+	                System.out.print( "$" );
 
-	        int sum = 0;
-	       int count = 0;
-	        for( ; ; ) {
-	        	 int x = Integer.parseInt( br.readLine() );
-	        	 if(x == 0) {
-	        		 break;
-	        	 }
-	        	sum += x;
-	        	count ++;
+	            System.out.println();
 	        }
-	        	System.out.println(sum / count);
 	}
 }
 

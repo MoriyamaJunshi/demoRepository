@@ -8,22 +8,17 @@ public class HelloWorld{
     public static void main( String[] args ) throws IOException{
     	BufferedReader br = new BufferedReader(
                 new InputStreamReader( System.in ) );
-		int     values[] = new int[10];
-		
-		for( int i = 0 ; i < 10 ; i++ )
-		values[i] = Integer.parseInt( br.readLine() );
-		
-		System.out.print( "\n偶数：" );
+    	int     values[] = new int[10];
+    	int     cnt, sum;
 
-		for( int n : values )
-		    if( ( n % 2 ) == 0 )
-		        System.out.print( n + " " );
+    	for( cnt = 0, sum = 0 ; cnt < 10 && sum <= 100 ; cnt++ )
+    	{
+    	    values[cnt] = Integer.parseInt( br.readLine() );
+    	    sum += values[cnt];
+    	}
 
-		System.out.print( "\n奇数：" );
-
-		for( int n : values )
-		    if( ( n % 2 ) != 0 )
-		        System.out.print( n + " " );
+    	for( int i = 0 ; i < cnt ; i ++ )
+    	    System.out.print( "\n" + values[i] );
 	}
 }
 

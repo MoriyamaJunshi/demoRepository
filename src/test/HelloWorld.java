@@ -1,26 +1,20 @@
 package test;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class HelloWorld{
     public static void main( String[] args ) throws IOException{
-	        BufferedReader br = new BufferedReader(
-	                                new InputStreamReader( System.in ) );
-	        
-	        int size = Integer.parseInt( br.readLine() );
-	        for( int i = 0 ; i < size ; i++ )
-	        {
-	            for( int j = 0 ; j < size ; j++ )
-	            {
-	                if( i == j || ( size - i - 1 ) == j )
-	                    System.out.print( "X" );
-	                else
-	                    System.out.print( " " );
-	            }
+    	int     n1 = 0;
+    	int     n2 = 1;
+    	int     n3 = n1 + n2;
 
-	            System.out.println( "" );
+    	while( n1 <= 1000 )
+    	{
+    	    System.out.print( n1 + "," );
+
+    	    n1 = n2;
+    	    n2 = n3;
+    	    n3 = n1 + n2;
 	        }
 	}
 }

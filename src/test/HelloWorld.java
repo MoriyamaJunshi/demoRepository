@@ -13,10 +13,17 @@ public class HelloWorld{
 		for( int i = 0 ; i < 10 ; i++ )
 		values[i] = Integer.parseInt( br.readLine() );
 		
-		System.out.println();
-		
-		for( int i = 9 ; i >= 0 ; i-- )
-		System.out.println( values[i] );
+		System.out.print( "\n偶数：" );
+
+		for( int n : values )
+		    if( ( n % 2 ) == 0 )
+		        System.out.print( n + " " );
+
+		System.out.print( "\n奇数：" );
+
+		for( int n : values )
+		    if( ( n % 2 ) != 0 )
+		        System.out.print( n + " " );
 	}
 }
 
